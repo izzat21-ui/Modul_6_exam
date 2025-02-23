@@ -5,7 +5,7 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_DB: anonim_chat
+      POSTGRES_DB: sakura_food
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
     ports:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgresql+asyncpg://user:password@db/anonim_chat
+      DATABASE_URL: postgresql+asyncpg://user:0@localhost/sakura_food
       BOT_TOKEN: your-bot-token
 
 volumes:
